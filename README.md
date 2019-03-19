@@ -4,7 +4,7 @@ The world famous Snakes game, implemented in C++ using basic libraries
 Note: This might not work in a Linux environment, due to the unavailability of the **conio.h** header file. Make sure to add the **_khbit()** function before executing the code.
 
 ## The Working
-The main function consists of 3 functions, **Draw()**, **Input()**, and **Logic()**, called infinitely, until a boolean variable **gameover** becomes true.
+The main function consists of 4 functions. The **Setup()** function is called once, which initializes all the variables with a certain decided value. The **Draw()**, **Input()**, and **Logic()** functions are called infinitely, until a boolean variable **gameover** becomes true.
 
 ### The Draw() Function
 When called, this function clears the screen, draws the grid boundaries using hashtags, and prints the fruit and snake at the stored locations (explained ahead). It also shows the current user score.
