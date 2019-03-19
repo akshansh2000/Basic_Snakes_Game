@@ -2,7 +2,7 @@
 The world famous Snakes game, implemented in C++ using basic libraries
 
 ## The Working
-The main function consists of 3 functions, Draw(), Input(), and Logic(), called infinitely, until a boolean variable (gameover) becomes false.
+The main function consists of 3 functions, Draw(), Input(), and Logic(), called infinitely, until a boolean variable (gameover) becomes true.
 
 ### The Draw() Function
 When called, this function clears the screen, draws the grid boundaries using hashtags, and prints the fruit and snake at the stored locations (explained ahead). It also shows the current user score.
