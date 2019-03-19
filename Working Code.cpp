@@ -47,6 +47,36 @@ void Draw() {
     cout << "Your score: " << score;
 }
 
+void Input() {
+    if (_kbhit()) {
+        switch (_getch()) {
+        case 'a':
+            if (dir == RIGHT)
+                break;
+            dir = LEFT;
+            break;
+        case 's':
+            if (dir == UP)
+                break;
+            dir = DOWN;
+            break;
+        case 'd':
+            if (dir == LEFT)
+                break;
+            dir = RIGHT;
+            break;
+        case 'w':
+            if (dir == DOWN)
+                break;
+            dir = UP;
+            break;
+        case 't':
+            gameover = true;
+            break;
+        }
+    }
+}
+
 int main() {
     Setup();
     while (!gameover) {
