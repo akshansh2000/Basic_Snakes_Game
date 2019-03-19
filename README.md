@@ -1,7 +1,7 @@
 # Basic Snakes Game
 The world famous Snakes game, implemented in C++ using basic libraries
 
-Note: This might not work in a Linux environment, due to the unavailability of the **conio.h** header file. Make sure to add the **_khbit()** function before executing the code.
+Note: This might not work in a Linux environment, due to the unavailability of the **conio.h** header file. Make sure to add the **_kbhit()** function before executing the code.
 
 ## The Working
 The main function consists of 4 functions. The **Setup()** function is called once, which initializes all the variables with a certain decided value. The **Draw()**, **Input()**, and **Logic()** functions are called infinitely, until a boolean variable **gameover** becomes true.
