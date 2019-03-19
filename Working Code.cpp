@@ -13,6 +13,40 @@ enum Direction { STOP,
                  DOWN };
 Direction dir;
 
+void Draw() {
+    system("cls");
+    for (int i = 0; i < width; ++i)
+        cout << '#';
+    cout << endl;
+    for (int i = 0; i < height; ++i) {
+        for (int j = 0; j < width; ++j) {
+            if (j == 0 || j == width - 1)
+                cout << '#';
+            else if (j == x && i == y)
+                cout << '0';
+            else if (j == fruitx && i == fruity)
+                cout << 'F';
+            else {
+                bool print = false;
+                for (int k = 0; k < ntail; ++k) {
+                    if (tailx[k] == j && taily[k] == i) {
+                        cout << 'o';
+                        print = true;
+                    }
+                }
+                if (!print)
+                    cout << ' ';
+            }
+        }
+        cout << endl;
+    }
+    for (int i = 0; i < width; ++i)
+        cout << '#';
+    cout << endl
+         << endl;
+    cout << "Your score: " << score;
+}
+
 int main() {
     Setup();
     while (!gameover) {
